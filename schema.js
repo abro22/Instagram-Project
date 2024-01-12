@@ -24,6 +24,7 @@ const createUser = new mongoose.Schema({
 
 })
 
+
 //COMMENTS
 const commentSchema = new mongoose.Schema({
     commentid: {
@@ -50,7 +51,7 @@ const commentSchema = new mongoose.Schema({
 const postsSchema = new mongoose.Schema({
     userid: {
         required: true,
-        type: [createUser]
+        type: Number
     },
     username: {
         required: true,
@@ -80,8 +81,6 @@ const postsSchema = new mongoose.Schema({
 })
 
 
-
-
 // module.exports = mongoose.model('Comment', commentSchema)
 module.exports = mongoose.model('Data', postsSchema)
-// module.exports = mongoosr.model('Data', createUser)
+// module.exports = mongoose.model('Data', createUser)
